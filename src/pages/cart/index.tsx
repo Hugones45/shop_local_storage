@@ -40,9 +40,12 @@ export function Cart() {
                                 <p className="font-semibold text-center">{item.title}</p>
                             </div>
 
-                            <div className="flex flex-wrap justify-center items-center text-center gap-8 md:flex-nowrap lg:gap-20 ">
+                            <div className="flex flex-wrap justify-center items-center text-center gap-8 md:flex-nowrap">
 
-
+                                <strong className="w-36">{item.price.toLocaleString("pt-BR", {
+                                    style: "currency",
+                                    currency: "BRL"
+                                })}</strong>
                                 <div className="flex items-center justify-center gap-3">
                                     <button
                                         onClick={() => decreaseCartQuantity(item.id)}
@@ -53,7 +56,7 @@ export function Cart() {
                                         className="bg-slate-600 px-2 rounded text-white font-medium flex items-center justify-center">+</button>
                                 </div>
 
-                                <strong className="w-52 flex justify-center">Total - {parseFloat((item.quantity * item.price).toFixed(2)).toLocaleString("pt-BR", {
+                                <strong className="w-48 flex justify-center">Total - {parseFloat((item.quantity * item.price).toFixed(2)).toLocaleString("pt-BR", {
                                     style: "currency",
                                     currency: "BRL"
                                 })}</strong>
