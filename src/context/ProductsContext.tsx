@@ -37,7 +37,7 @@ export const ProductsContextProvider = ({ children }: childrenProps) => {
 
             if (existingItem) {
 
-                toast.error("Item has already been added to the cart!", {
+                toast.error("Already in the cart!", {
                     style: {
                         borderRadius: "10",
                         background: "#121212",
